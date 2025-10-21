@@ -37,32 +37,32 @@ public class GenerateVideosOperation : GoogleLongRunningOperation
         {
             this.Result = new GenerateVideosResponse();
 
-            if (operation.Response != null)
-            {
-                if (operation.Response.TryGetValue("generatedVideos", out var value))
-                    Result.GeneratedVideos = (value as JsonElement?)
-                        ?.Deserialize<List<Video>>();
-                if (operation.Response.TryGetValue("raiMediaFilteredCount", out var value1))
-                    Result.RaiMediaFilteredCount =
-                        (value1 as JsonElement?)?.GetInt32();
-                if (operation.Response.TryGetValue("raiMediaFilteredReasons", out var value2))
-                    Result.RaiMediaFilteredReasons =
-                        (value2 as JsonElement?)?.Deserialize<List<string>>();
-                
-                if (operation.Response.TryGetValue("videos", out var value3))
-                    Result.GeneratedVideos = (value3 as JsonElement?)
-                        ?.Deserialize<List<Video>>();
-                
-                if (operation.Response.TryGetValue("generated_videos", out var value4))
-                    Result.GeneratedVideos = (value4 as JsonElement?)
-                        ?.Deserialize<List<Video>>();
-                if (operation.Response.TryGetValue("rai_media_filtered_count", out var value5))
-                    Result.RaiMediaFilteredCount =
-                        (value5 as JsonElement?)?.GetInt32();
-                if (operation.Response.TryGetValue("rai_media_filtered_reasons", out var value6))
-                    Result.RaiMediaFilteredReasons =
-                        (value6 as JsonElement?)?.Deserialize<List<string>>();
-            }
+            // if (operation.Response != null)
+            // {
+            //     if (operation.Response.TryGetValue("generatedVideos", out var value))
+            //         Result.GeneratedVideos = (value as JsonElement?)
+            //             ?.Deserialize<List<Video>>();
+            //     if (operation.Response.TryGetValue("raiMediaFilteredCount", out var value1))
+            //         Result.RaiMediaFilteredCount =
+            //             (value1 as JsonElement?)?.GetInt32();
+            //     if (operation.Response.TryGetValue("raiMediaFilteredReasons", out var value2))
+            //         Result.RaiMediaFilteredReasons =
+            //             (value2 as JsonElement?)?.Deserialize<List<string>>();
+            //
+            //     if (operation.Response.TryGetValue("videos", out var value3))
+            //         Result.GeneratedVideos = (value3 as JsonElement?)
+            //             ?.Deserialize<List<Video>>();
+            //
+            //     if (operation.Response.TryGetValue("generated_videos", out var value4))
+            //         Result.GeneratedVideos = (value4 as JsonElement?)
+            //             ?.Deserialize<List<Video>>();
+            //     if (operation.Response.TryGetValue("rai_media_filtered_count", out var value5))
+            //         Result.RaiMediaFilteredCount =
+            //             (value5 as JsonElement?)?.GetInt32();
+            //     if (operation.Response.TryGetValue("rai_media_filtered_reasons", out var value6))
+            //         Result.RaiMediaFilteredReasons =
+            //             (value6 as JsonElement?)?.Deserialize<List<string>>();
+            // }
         }
     }
 
