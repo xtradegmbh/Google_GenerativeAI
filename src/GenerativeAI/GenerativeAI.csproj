@@ -15,14 +15,14 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/gunpal5/Google_GenerativeAI</RepositoryUrl>
 	  <PackageTags>Gemini,Google,GenerativeAI,GoogleGemini.Net,Google,Gemini,Gemini .Net,GoogleGemini,GenerativeAI .Net,Vertex AI</PackageTags>
-	  <Version>3.4.2</Version>
+	  <Version>3.4.6</Version>
 	  <AssemblyVersion>3.4.2</AssemblyVersion>
 	  <FileVersion>3.4.2</FileVersion>
 	  <SignAssembly>True</SignAssembly>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-  
+
   </PropertyGroup>
-	
+
   <ItemGroup>
       <None Include="..\..\favicon.png" Pack="True" PackagePath="" />
   </ItemGroup>
@@ -65,7 +65,7 @@
     </ItemGroup>
 
   <ItemGroup>
-    
+
   </ItemGroup>
 
   <ItemGroup>

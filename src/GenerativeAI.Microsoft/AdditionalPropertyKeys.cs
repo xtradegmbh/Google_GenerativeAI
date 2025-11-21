@@ -33,5 +33,10 @@ public static class AdditionalPropertiesKeys
     /// <summary>
     /// Key used to specify the output MIME type for image generation ("image/png", "image/jpeg").
     /// </summary>
-    public const string ImageConfigOutputMimeType = "OutputMimeType";
+    public const string ImageOutputOptionsMimeType = "MimeType";
+
+    /// <summary>
+    /// Key used to specify the compression quality for image generation (0-100).
+    /// </summary>
+    public const string ImageOutputOptionsCompressionQuality = "CompressionQuality";
 }

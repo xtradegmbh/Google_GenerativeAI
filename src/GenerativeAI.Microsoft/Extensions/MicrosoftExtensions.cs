@@ -354,10 +354,18 @@ public static class MicrosoftExtensions
             config.ImageConfig.ImageSize = imageSize;
         }
 
-        if (options.AdditionalProperties.TryGetValue(AdditionalPropertiesKeys.ImageConfigOutputMimeType, out string? outputMimeType))
+        if (options.AdditionalProperties.TryGetValue(AdditionalPropertiesKeys.ImageOutputOptionsMimeType, out string? mimeType))
         {
             config.ImageConfig ??= new ImageConfig();
-            config.ImageConfig.OutputMimeType = outputMimeType;
+            config.ImageConfig.ImageOutputOptions ??= new ImageOutputOptions();
+            config.ImageConfig.ImageOutputOptions.MimeType = mimeType;
+        }
+
+        if (options.AdditionalProperties.TryGetValue(AdditionalPropertiesKeys.ImageOutputOptionsCompressionQuality, out int compressionQuality))
+        {
+            config.ImageConfig ??= new ImageConfig();
+            config.ImageConfig.ImageOutputOptions ??= new ImageOutputOptions();
+            config.ImageConfig.ImageOutputOptions.CompressionQuality = compressionQuality;
         }
 
         return config;

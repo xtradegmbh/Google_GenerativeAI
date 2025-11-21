@@ -330,7 +330,7 @@ public class ManualRoutingMode
 }
 
 /// <summary>
-/// Configuration for image generation in models that support image output (e.g., gemini-2.5-flash-image).
+/// Configuration for image generation in models that support image output (e.g., gemini-2.5-flash-image, gemini-3-pro-image-preview).
 /// </summary>
 public class ImageConfig
 {
@@ -348,9 +348,27 @@ public class ImageConfig
     public string? ImageSize { get; set; }
 
     /// <summary>
-    /// Optional. The output MIME type for generated images. Values: "image/png", "image/jpeg".
+    /// Optional. The image output options for generated images.
     /// Only supported on models like gemini-3-pro-image-preview.
     /// </summary>
-    [JsonPropertyName("outputMimeType")]
-    public string? OutputMimeType { get; set; }
+    [JsonPropertyName("imageOutputOptions")]
+    public ImageOutputOptions? ImageOutputOptions { get; set; }
+}
+
+/// <summary>
+/// The image output format for generated images.
+/// </summary>
+public class ImageOutputOptions
+{
+    /// <summary>
+    /// Optional. The image format that the output should be saved as. Values: "image/png", "image/jpeg".
+    /// </summary>
+    [JsonPropertyName("mimeType")]
+    public string? MimeType { get; set; }
+
+    /// <summary>
+    /// Optional. The compression quality of the output image (0-100).
+    /// </summary>
+    [JsonPropertyName("compressionQuality")]
+    public int? CompressionQuality { get; set; }
 }
