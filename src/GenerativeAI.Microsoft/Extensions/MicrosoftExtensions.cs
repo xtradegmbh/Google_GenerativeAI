@@ -348,6 +348,18 @@ public static class MicrosoftExtensions
             config.ImageConfig.AspectRatio = aspectRatio;
         }
 
+        if (options.AdditionalProperties.TryGetValue(AdditionalPropertiesKeys.ImageConfigImageSize, out string? imageSize))
+        {
+            config.ImageConfig ??= new ImageConfig();
+            config.ImageConfig.ImageSize = imageSize;
+        }
+
+        if (options.AdditionalProperties.TryGetValue(AdditionalPropertiesKeys.ImageConfigOutputMimeType, out string? outputMimeType))
+        {
+            config.ImageConfig ??= new ImageConfig();
+            config.ImageConfig.OutputMimeType = outputMimeType;
+        }
+
         return config;
     }
 

@@ -24,4 +24,14 @@ public static class AdditionalPropertiesKeys
     /// Key used to specify the aspect ratio for image generation.
     /// </summary>
     public const string ImageConfigAspectRatio = "AspectRatio";
+
+    /// <summary>
+    /// Key used to specify the output resolution for image generation ("1K", "2K", "4K").
+    /// </summary>
+    public const string ImageConfigImageSize = "ImageSize";
+
+    /// <summary>
+    /// Key used to specify the output MIME type for image generation ("image/png", "image/jpeg").
+    /// </summary>
+    public const string ImageConfigOutputMimeType = "OutputMimeType";
 }

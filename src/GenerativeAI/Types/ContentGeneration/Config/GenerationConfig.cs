@@ -165,7 +165,7 @@ public class GenerationConfig
     /// </summary>
     [JsonPropertyName("speechConfig")]
     public SpeechConfig? SpeechConfig { get; set; }
-    
+
     /// <summary>
     /// Optional. Config for thinking features.
     /// An error will be returned if this field is set for models that don't support thinking.
@@ -178,13 +178,13 @@ public class GenerationConfig
     /// </summary>
     [JsonPropertyName("mediaResolution")]
     public MediaResolution? MediaResolution { get; set; }
-    
+
     /// <summary>
     /// Optional. If enabled, audio timestamp will be included in the request to the model.
     /// </summary>
     [JsonPropertyName("audioTimestamp")]
     public bool? AudioTimestamp { get; set; }
-    
+
     /// <summary>
     /// Optional. Routing configuration.
     /// </summary>
@@ -228,7 +228,7 @@ public class ThinkingConfig
     /// </summary>
     [JsonPropertyName("includeThoughts")]
     public bool? IncludeThoughts { get; set; }
-    
+
     /// <summary>
     /// Indicates the thinking budget in tokens
     /// </summary>
@@ -279,7 +279,7 @@ public class RoutingConfig
 }
 
 /// <summary>
-/// When automated routing is specified, the routing will be determined by the pretrained routing model 
+/// When automated routing is specified, the routing will be determined by the pretrained routing model
 /// and customer provided model routing preference.
 /// </summary>
 public class AutoRoutingMode
@@ -339,4 +339,18 @@ public class ImageConfig
     /// </summary>
     [JsonPropertyName("aspectRatio")]
     public string? AspectRatio { get; set; }
+
+    /// <summary>
+    /// Optional. The output resolution for generated images. Values: "1K", "2K", "4K".
+    /// Only supported on models like gemini-3-pro-image-preview.
+    /// </summary>
+    [JsonPropertyName("imageSize")]
+    public string? ImageSize { get; set; }
+
+    /// <summary>
+    /// Optional. The output MIME type for generated images. Values: "image/png", "image/jpeg".
+    /// Only supported on models like gemini-3-pro-image-preview.
+    /// </summary>
+    [JsonPropertyName("outputMimeType")]
+    public string? OutputMimeType { get; set; }
 }
