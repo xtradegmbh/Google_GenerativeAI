@@ -447,9 +447,7 @@ public static class MicrosoftExtensions
             {
                 Contents = contents,
                 AdditionalProperties = null,
-                FinishReason = response?.Candidates?.FirstOrDefault()?.FinishReason == FinishReason.OTHER
-                    ? ChatFinishReason.Stop
-                    : null,
+                FinishReason = ToFinishReason(response?.Candidates?.FirstOrDefault()?.FinishReason),
                 RawRepresentation = response,
                 //ResponseId = response.id,
                 Role = ToChatRole(response?.Candidates?.FirstOrDefault()?.Content?.Role),
